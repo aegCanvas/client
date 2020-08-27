@@ -1,19 +1,14 @@
 <template>
+    <div style="height:100%;display:flex;flex-direction:column;overflow:hidden">
 
-
-    <div id="container" class="d-flex flex-column" style="height:100%;padding:1px;padding-left:0px;width:100%">
-      <div class="loaderanimate" style="cursor:none;display: none;
-  justify-content: center;
-  align-items: center;color:#e4e4e4">
-        <div id="betas" class="animated infinite rubberBand" style="pointer-events:none;margin-bottom:100px;font-size:200px;cursor:none">AegCanvas<span class="beta">beta</span></div>
-      </div>
-
-      <div style="display:flex;height:100%;flex-direction:column">
-      <div>
-      <div>
+        <div class="loaderanimate" style="cursor:none;display: flex;justify-content: center;align-items: center;color:#e4e4e4">
+        <div id="betas" class="animated infinite rubberBand" style="pointer-events:none;margin-bottom:100px;cursor:none">AegCanvas<span class="betaz">beta</span></div></div>
+        
+        <div>
+                  <div>
         <input style="display:none" type="file" id="i_file" value=""> 
          <div class="navigasi" style="margin-bottom:3px;">
-      <div class="logo">Aeg<span style="font-size:20px;">Canvas<span style="margin-left:3px;position:absolute;font-size:10px;">beta</span></span></div>
+      <div class="logo">Aeg<span class="canvas">Canvas<span class="beta" style="margin-left:3px;position:absolute">beta</span></span></div>
       <div class="nv">
         <ul class="nv-ul">
           <li id="navya" class="file"><span style="margin-right:8px"><svg width="10" aria-hidden="true" data-prefix="far" data-icon="file" class="svg-inline--fa fa-file fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48z"></path></svg></span>File</li>
@@ -31,14 +26,14 @@
         </ul>
        
       </div>
-       <div id="keteranganpanel1" style="width:100%;text-align:right;font-size:14px;margin-top:7px;display:none;">Panel untuk memilih berkas file .ass atau video dalam komputer untuk diproses</div>
-        <div id="keteranganpanel2" style="width:100%;text-align:right;font-size:14px;margin-top:7px;display:none;">Fitur-fitur dalam web aplikasi ini (soon!)</div>
-          <div id="keteranganpanel3" style="width:100%;text-align:right;font-size:14px;margin-top:7px;display:none;">Load subtitle dari URL.Object</div>
-           <div id="keteranganpanel4" style="width:100%;text-align:right;font-size:14px;margin-top:7px;display:none;">Load video dari URL.Object</div>
-            <div id="keteranganpanel5" style="width:100%;text-align:right;font-size:14px;margin-top:7px;display:none;">?????????????????????????</div>
-            <div id="keteranganpanel6" style="width:100%;text-align:right;font-size:14px;margin-top:7px;display:none;">Ekspor hasil ubah menjadi .ass</div>
-             <div id="urlobj" style="width:100%;text-align:right;font-size:14px;margin-top:7px;display:none;">
-               <input type="text" style="background-color: #20262e;
+       <div id="keteranganpanel1" class="keteranganpanel" style="width:100%;text-align:right;font-size:14px;margin-top:7px;display:none;">Panel untuk memilih berkas file .ass atau video dalam komputer untuk diproses</div>
+        <div id="keteranganpanel2" class="keteranganpanel" style="width:100%;text-align:right;font-size:14px;margin-top:7px;display:none;">Fitur-fitur dalam web aplikasi ini (soon!)</div>
+          <div id="keteranganpanel3" class="keteranganpanel" style="width:100%;text-align:right;font-size:14px;margin-top:7px;display:none;">Load subtitle dari URL.Object</div>
+           <div id="keteranganpanel4" class="keteranganpanel" style="width:100%;text-align:right;font-size:14px;margin-top:7px;display:none;">Load video dari URL.Object</div>
+            <div id="keteranganpanel5" class="keteranganpanel" style="width:100%;text-align:right;font-size:14px;margin-top:7px;display:none;">?????????????????????????</div>
+            <div id="keteranganpanel6" class="keteranganpanel" style="width:100%;text-align:right;font-size:14px;margin-top:7px;display:none;">Ekspor hasil ubah menjadi .ass</div>
+             <div id="urlobj" class="keteranganpanel" style="width:100%;text-align:right;font-size:14px;margin-top:7px;display:none;">
+               <input class="keteranganpanel" type="text" style="background-color: #20262e;
     width: auto;
     border: 0px;
     border-bottom: solid 1px #888888;color: rgb(214, 214, 214);
@@ -48,8 +43,8 @@
     width: 300px;" v-model="assfile" v-on:keyup.enter="urlController">
              </div>
 
-               <div id="vidobj" style="width:100%;text-align:right;font-size:14px;margin-top:7px;display:none;">
-               <input type="text" style="background-color: #20262e;
+               <div id="vidobj" class="keteranganpanel" style="width:100%;text-align:right;font-size:14px;margin-top:7px;display:none;">
+               <input type="text" class="keteranganpanel" style="background-color: #20262e;
     width: auto;
     border: 0px;
     border-bottom: solid 1px #888888;color: rgb(214, 214, 214);
@@ -63,32 +58,33 @@
     
     
       </div>
-
-      </div>
-      <div style="display:flex;flex-direction:row">
-
+        </div>
+        <div style="height:100%;display:flex;flex-direction:row">
             <div style="width:100%;height:100%">
-            <div id="debug1" style="height:100%;width:100%">
-              <video style="border-radius:4px;height:100%;width:100%" id="video1" height="auto" controls>
-              <source v-bind:src="vid" type="video/mp4">
-            </video>
+                    <div style="width:100%;height:100%">
+                    <div id="debug1" style="height:100%;width:100%">
+                    <video style="border-radius:4px;height:100%;width:100%" id="video1" height="auto" controls>
+                    <source v-bind:src="vid" type="video/mp4">
+                    </video>
+                    </div>
+          </div>
             </div>
+            <div id="textareaa" style="width:100%;height:100%">
+                       <div style="width:100%;height:100%">
+                        <div style="padding: 0px;padding-bottom:0px;margin-left: 1px;width: 100%;height:100%">
+                        <textarea class="textarea" v-model="line[l_id].line" v-on:keyup.enter="enter"></textarea>
+                        </div>
+               
           </div>
 
-          <div style="width:100%;height:100%">
-            <div style="padding: 0px;padding-bottom:0px;margin-left: 1px;width: 100%;height:100%">
-            <textarea class="textarea" v-model="line[l_id].line" v-on:keyup.enter="enter"></textarea>
-          </div>
-
-          </div>
-      </div>
-     
-      </div>
-
-      
-      <div style="padding:0px;height:100%">
+            </div>
+        </div>
+        <div style="height:100%;display:flex;flex-direction:row">
+            <div id="tabel1" style="width:100%;height:100%">
+                  
+      <div  style="padding:0px;height:100%">
         <div style="width:100%">
-          <table style="background-color:#20262e;font-size:12px;width:100%;color:#fbfbfb;font-weight:100;height:400px">
+          <table style="background-color:#20262e;font-size:12px;width:100%;color:#fbfbfb;font-weight:100;">
               <tr>
                 <th style="text-align:center;">#</th>
                 <th style="text-align:center;">Start</th>
@@ -101,7 +97,7 @@
             </table>
 
 
-                 <div id="tblpg1" style="max-height:400px;overflow-y:hidden">
+                 <div id="tblpg1" style="max-height:442px;overflow-y:hidden">
              <table style="background-color:rgb(234 234 234);font-size:12px;width:100%;color:#fbfbfb;font-weight:100;">
               <tr v-for="x,i in line">
                 <th style=";text-align:center;width:200px;width:25px;"><input class="aegisubline" style="width:100%" type="text" v-model="x.index" disabled></th>
@@ -110,7 +106,7 @@
                 <th style=";text-align:center;width:200px;width:150px;"><input class="aegisubline" style="width:100%" type="text" v-model="x.style" disabled></th>
                 <th style="text-align:center;width:200px;width:159px;"><input class="aegisubline" style="width:100%" type="text" v-model="x.actor" disabled></th>
                 <th style="text-align:center;width:200px;width:150px;"><input class="aegisubline" style="width:100%" type="text" v-model="x.effect" disabled></th>
-                <th style="display:none;text-align:left;"><input class="" style="padding-left:4px;width:100%" type="text" v-on:keyup.tab="tab" v-on:input="input_bawah(i)" v-on:keyup.enter="enter2" v-on:dblclick="dblclick_bawah(i)" v-model="x.line" v-on:click="click(i)"></th>
+                <th style="display:none;text-align:left;"><input class="" style="padding-left:4px;width:100%" type="text" v-on:keyup.tab="tab" v-on:change="input_bawah(i)" v-on:keyup.enter="enter2" v-on:dblclick="dblclick_bawah(i)" v-model="x.line" v-on:click="click(i)"></th>
               </tr>
       
             </table>
@@ -118,8 +114,10 @@
 
 
 
-        </div>
-        <div style="background-color:#1c2128;width:100%;padding:0px;">
+        </div></div>
+            </div>
+            <div style="width:100%;height:100%">
+                <div style="background-color:#1c2128;width:100%;padding:0px;height:53%">
             <table style="background-color:#20262e;font-size:12px;width:100%;color:#fbfbfb;font-weight:100;">
               <tr>
                 <th style="display:none;text-align:center;width:200px;width:25px;">#</th>
@@ -131,7 +129,7 @@
                 <th style="text-align:center;background-color:rgb(136, 136, 136)">Text</th>
               </tr>
             </table>
-              <div id="tabelpg2" style="max-height:95%;overflow-y:scroll">
+              <div id="tabelpg2" style="max-height:442px;overflow-y:scroll">
              <table style="background-color:#20262e;font-size:12px;width:100%;color:#fbfbfb;font-weight:100;">
               <tr v-for="x,i in line">
                 <th style="display:none;text-align:center;width:200px;width:25px;"><input class="aegisubline" style="width:100%" type="text" v-model="x.index" disabled></th>
@@ -140,7 +138,7 @@
                 <th style="display:none;text-align:center;width:200px;width:150px;"><input class="aegisubline" style="width:100%" type="text" v-model="x.style" disabled></th>
                 <th style="display:none;text-align:center;width:200px;width:159px;"><input class="aegisubline" style="width:100%" type="text" v-model="x.actor" disabled></th>
                 <th style="display:none;text-align:center;width:200px;width:150px;"><input class="aegisubline" style="width:100%" type="text" v-model="x.effect" disabled></th>
-                <th style="text-align:left;"><input class="playground" style="padding-left:4px;width:100%" type="text" v-on:keyup.tab="tab" v-on:input="input_bawah(i)" v-on:keyup.enter="enter2" v-on:dblclick="dblclick_bawah(i)" v-model="x.line" v-on:click="click(i)"></th>
+                <th style="text-align:left;"><input class="playground" style="padding-left:4px;width:100%" type="text" v-on:keyup.tab="tab" v-on:change="input_bawah(i)" v-on:keyup.enter="enter2" v-on:dblclick="dblclick_bawah(i)" v-model="x.line" v-on:click="click(i)"></th>
               </tr>
       
             </table>
@@ -149,8 +147,12 @@
         </div>
       </div>
       </div>
-  </div>
+            </div>
+        </div>
+    </div>
 </template>
+
+
 
 <script>
 import axios from "axios";
@@ -242,6 +244,7 @@ Dialogue: 0,0:01:28.81,0:01:31.69,Default - Copy,,0,0,0,Sien,{\an5\blur0.7\c&HE3
 Dialogue: 0,0:02:13.90,0:02:19.74,Default - Copy,,0,0,0,Sien,{\an5\fsp0.4\blur0.6\c&HE3E3E3&\bord0\fs30\b0\fscx133\fscy146\pos(644.724,423.619)}Didedikasikan untuk mereka yang tidak tahu apa itu cinta.
 Dialogue: 0,0:02:09.48,0:02:11.48,Default,,0,0,0,,`,
       l_id: 0,
+      sudahh: false,
       line: [
         {
           index: "1",
@@ -405,12 +408,15 @@ Dialogue: 0,0:02:09.48,0:02:11.48,Default,,0,0,0,,`,
 
     ///////////////////////
 
+    let sudahhh = false;
+
     axios.get(this.assfile).then(res => {
       this.placeholder = res.data;
       axios
         .post("https://aegcanvas.herokuapp.com/upload", { data: res.data })
         .then(response => {
           this.line = response.data;
+          sudahhh = true;
         })
         .catch(error => {
           console.log(error);
@@ -418,10 +424,22 @@ Dialogue: 0,0:02:09.48,0:02:11.48,Default,,0,0,0,,`,
     });
 
     var interval = setInterval(function() {
-      if (document.getElementById("video1").readyState >= 3) {
+      if (
+        document.getElementById("video1").readyState >= 3 &&
+        sudahhh === true
+      ) {
         document.querySelectorAll(".textarea")[0].click();
         clearInterval(interval);
-        document.querySelectorAll(".loaderanimate")[0].style.display = "none";
+        let tinggi = window.innerHeight;
+        let t = document.querySelectorAll(".navigasi")[0].offsetHeight;
+        tinggi = tinggi / 2 - t;
+        document.querySelectorAll("#tblpg1")[0].style.maxHeight = `${tinggi +
+          8}px`;
+        document.querySelectorAll("#tabelpg2")[0].style.maxHeight = `${tinggi +
+          8}px`;
+        setTimeout(() => {
+          document.querySelectorAll(".loaderanimate")[0].style.display = "none";
+        }, 500);
       }
     }, 500);
 
@@ -545,18 +563,6 @@ Dialogue: 0,0:02:09.48,0:02:11.48,Default,,0,0,0,,`,
       document.querySelectorAll("#debug1 svg").forEach((a, b) => {
         a.outerHTML = "";
       });
-      this.render_reset();
-      fetch(this.assfile)
-        .then(res => res.text())
-        .then(text => {
-          this.ass = new ASS(
-            this.placeholder,
-            document.getElementById("video1"),
-            {
-              container: document.getElementById("debug1")
-            }
-          );
-        });
       this.l_id = i;
     },
     highlight: function() {
@@ -688,13 +694,68 @@ Dialogue: 0,0:02:09.48,0:02:11.48,Default,,0,0,0,,`,
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.beta {
+#betas {
+  font-size: 200px;
+}
+
+.betaz {
   cursor: none;
   pointer-events: none;
   position: absolute;
   margin-top: 40px;
   margin-left: -20px;
   font-size: 50px;
+}
+
+@media screen and (max-width: 1200px) {
+  #betas {
+    font-size: 50px;
+  }
+
+  .edit {
+    display: none;
+  }
+
+  .video {
+    display: none;
+  }
+
+  .subtitle {
+    display: none;
+  }
+
+  .help {
+    display: none;
+  }
+
+  #textareaa {
+    display: none;
+  }
+
+  .keteranganpanel {
+    display: none;
+  }
+
+  .betaz {
+    cursor: none;
+    pointer-events: none;
+    position: absolute;
+    margin-top: -5px;
+    margin-left: -20px;
+    font-size: 20px;
+  }
+
+  #tabel1 {
+    display: none;
+  }
+}
+
+.canvas {
+  font-size: 20px;
+}
+
+.beta {
+  font-size: 10px;
 }
 
 .loaderanimate {
